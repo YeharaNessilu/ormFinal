@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: FCEFCB;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PaymentInvoiceManagementController">
+   <children>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="487.0" layoutY="301.0" onAction="#saveOnAction" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: green;" text="Save">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblPayment" layoutX="19.0" layoutY="354.0" onMouseClicked="#tableOnAction" prefHeight="230.0" prefWidth="866.0">
+         <columns>
+            <TableColumn fx:id="colTherapy" prefWidth="211.20003700256348" text="Theropy" />
+            <TableColumn fx:id="colPatient" prefWidth="177.5999755859375" text="Patient" />
+            <TableColumn fx:id="colPayment" prefWidth="220.80007934570312" text="Payement" />
+            <TableColumn fx:id="colStatus" prefWidth="250.4000244140625" text="Status" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="695.0" layoutY="301.0" onAction="#generateReportOnAction" prefHeight="37.0" prefWidth="186.0" style="-fx-background-color: blue;" text="Generate Report" textFill="#efeaea">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="766.0" layoutY="81.0" text="Id:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblId" layoutX="809.0" layoutY="81.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="txtStatus" layoutX="156.0" layoutY="269.0" prefHeight="30.0" prefWidth="294.0" promptText="status" text="status">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <JFXButton buttonType="RAISED" layoutX="590.0" layoutY="301.0" onAction="#resetOnAction" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: red;" text="Reset">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutY="-1.0" prefHeight="75.0" prefWidth="900.0" style="-fx-background-color: A86523;">
+         <children>
+            <Label layoutX="46.0" layoutY="26.0" text="Payment &amp; Invoice Management">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="265.0" layoutY="122.0" prefHeight="200.0" prefWidth="186.0">
+         <children>
+            <ComboBox fx:id="cmbTherapy" prefHeight="26.0" prefWidth="188.0" promptText="theropy">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="cmbPatient" prefHeight="26.0" prefWidth="187.0" promptText="patient">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </ComboBox>
+      <!--      <JFXTextField fx:id="txtPayment" layoutX="280.0" layoutY="147.0" prefHeight="25.0" prefWidth="108.0" promptText="cost" text="payment" />-->
+            <TextField fx:id="txtPayment" prefHeight="25.0" prefWidth="108.0" promptText="cost" text="payment">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox layoutX="156.0" layoutY="122.0" prefHeight="135.0" prefWidth="100.0">
+         <children>
+            <Label text="Therapy">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Patient">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Payment">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
