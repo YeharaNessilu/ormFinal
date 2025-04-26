@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: FCEFCB;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.TherapySessionSchedulingController">
+   <children>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="624.0" layoutY="444.0" onAction="#saveOnAction" style="-fx-background-color: green;" text="Save">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="736.0" layoutY="444.0" onAction="#resetOnAction" style="-fx-background-color: red;" text="Reset">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtCost" layoutX="466.0" layoutY="338.0" prefHeight="25.0" prefWidth="236.0" promptText="cost" />
+      <TextField fx:id="txtDescription" layoutX="466.0" layoutY="388.0" prefHeight="25.0" prefWidth="236.0" promptText="description" text="description" />
+      <ComboBox fx:id="cmbTerapy" layoutX="466.0" layoutY="170.0" prefHeight="35.0" prefWidth="236.0" promptText="therapy " />
+      <ComboBox fx:id="cmbPatient" layoutX="466.0" layoutY="234.0" prefHeight="28.0" prefWidth="236.0" promptText="patient" />
+      <Label layoutX="371.0" layoutY="83.0" text="Id:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblId" layoutX="452.0" layoutY="88.0" text="Label" />
+      <ComboBox fx:id="cmbProgram" layoutX="466.0" layoutY="287.0" prefHeight="28.0" prefWidth="236.0" promptText="program" />
+      <AnchorPane layoutX="-3.0" layoutY="-3.0" prefHeight="76.0" prefWidth="906.0" style="-fx-background-color: A86523;">
+         <children>
+            <Label layoutX="316.0" layoutY="24.0" text="Therapy Session Scheduling">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="314.0" layoutY="179.0" text="Therapy" />
+      <Label layoutX="312.0" layoutY="291.0" text="Program" />
+      <Label layoutX="314.0" layoutY="239.0" text="Patient" />
+   </children>
+</AnchorPane>

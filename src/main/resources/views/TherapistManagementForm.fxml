@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: FCEFCB;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.TherapistManagementController">
+   <children>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="440.0" layoutY="272.0" onAction="#saveOnAction" prefHeight="37.0" prefWidth="86.0" style="-fx-background-color: green;" text="Save">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtName" layoutX="229.0" layoutY="121.0" prefHeight="26.0" prefWidth="178.0" promptText="name" />
+      <TextField fx:id="txtStatus" layoutX="229.0" layoutY="174.0" prefHeight="26.0" prefWidth="178.0" promptText="status" />
+      <TableView fx:id="tblTherapist" layoutX="30.0" layoutY="343.0" onMouseClicked="#tblOnAction" prefHeight="226.0" prefWidth="850.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="241.60006141662598" text="Name" />
+          <TableColumn fx:id="colStatus" prefWidth="300.7999572753906" text="Status" />
+            <TableColumn fx:id="colProgram" prefWidth="308.0" text="Program" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="630.0" layoutY="272.0" onAction="#generateReportOnAction" prefHeight="37.0" prefWidth="242.0" style="-fx-background-color: blue;" text="Generate Report" textFill="#faf7f7">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <ComboBox fx:id="cmbProgram" layoutX="229.0" layoutY="224.0" prefHeight="26.0" prefWidth="178.0" promptText="program" />
+      <Label layoutX="751.0" layoutY="80.0" text="Id :">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblId" layoutX="799.0" layoutY="81.0" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <JFXButton buttonType="RAISED" layoutX="536.0" layoutY="272.0" onAction="#refreshOnAction" prefHeight="37.0" prefWidth="86.0" style="-fx-background-color: red;" text="Refresh">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane prefHeight="75.0" prefWidth="900.0" style="-fx-background-color: A86523;">
+         <children>
+            <Label layoutX="42.0" layoutY="20.0" text="Therapist Management">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="83.0" layoutY="106.0" prefHeight="163.0" prefWidth="146.0">
+         <children>
+            <Label prefHeight="52.0" prefWidth="317.0" text="Therapist Name :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="55.0" prefWidth="82.0" text="Status :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="52.0" prefWidth="198.0" text="Program  :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

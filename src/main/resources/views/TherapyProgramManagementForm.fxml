@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: FCEFCB;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.TherapProgramManagementController">
+   <children>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="421.0" layoutY="298.0" onAction="#saveOnAction" prefHeight="37.0" prefWidth="82.0" style="-fx-background-color: green;" text="Save">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblTherapyProgram" layoutX="43.0" layoutY="361.0" onMouseClicked="#tblOnAction" prefHeight="224.0" prefWidth="818.0">
+         <columns>
+            <TableColumn fx:id="colName" prefWidth="242.39998626708984" text="Name" />
+            <TableColumn fx:id="colDuration" prefWidth="176.79998779296875" text="Duration" />
+            <TableColumn fx:id="colCost" prefWidth="156.00003051757812" text="Cost" />
+            <TableColumn fx:id="colDescription" prefWidth="243.20001220703125" text="Decription" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="651.0" layoutY="298.0" onAction="#generateReportOnAction" prefHeight="37.0" prefWidth="234.0" style="-fx-background-color: blue;" text="Generate Report" textFill="#faf6f6">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="540.0" layoutY="298.0" onAction="#refreshOnAction" prefHeight="37.0" prefWidth="82.0" style="-fx-background-color: red;" text="Refresh">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="768.0" layoutY="73.0" text="Id:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblId" layoutX="811.0" layoutY="73.0" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <AnchorPane layoutY="-2.0" prefHeight="75.0" prefWidth="900.0" style="-fx-background-color: A86523;">
+         <children>
+            <Label layoutX="34.0" layoutY="20.0" text="Therapy Program Management">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="275.0" layoutY="86.0" prefHeight="163.0" prefWidth="146.0">
+         <children>
+            <Label prefHeight="52.0" prefWidth="317.0" text="Program Name :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="55.0" prefWidth="82.0" text="Duration :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="52.0" prefWidth="198.0" text="Program Cost :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="412.0" layoutY="99.0" prefHeight="156.0" prefWidth="180.0">
+         <children>
+            <TextField fx:id="txtName" prefHeight="26.0" prefWidth="180.0" promptText="name">
+               <VBox.margin>
+                  <Insets bottom="25.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="txtDuration" prefHeight="26.0" prefWidth="171.0" promptText="duration">
+               <VBox.margin>
+                  <Insets bottom="25.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="txtCost" prefHeight="26.0" prefWidth="171.0" promptText="cost">
+               <VBox.margin>
+                  <Insets bottom="25.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <TextField fx:id="txtDescription" layoutX="226.0" layoutY="255.0" prefHeight="26.0" prefWidth="369.0" promptText="description" />
+   </children>
+</AnchorPane>
